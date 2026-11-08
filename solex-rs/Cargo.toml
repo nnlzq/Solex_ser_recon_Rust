@@ -1,0 +1,21 @@
+[package]
+name = "solex-rs"
+version = "4.3.9"
+edition = "2021"
+description = "Rust rewrite of the Solex spectroheliograph SER image reconstruction pipeline"
+
+[dependencies]
+eframe = "0.28"
+egui = "0.28"
+rfd = "0.15"
+png = "0.17"
+serde_json = "1"
+
+[build-dependencies]
+png = "0.17"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "unwind"
